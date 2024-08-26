@@ -11,7 +11,7 @@ let openingBrackets = new Set(bracketsConfig.map(pair => pair[0]));
 
 for(let char of str) {
   if(openingBrackets.has(char)) {
-    if(objToCompare.char === char) {
+    if(objToCompare[char] === char) {
       stack[stack.length - 1] ===  char ? stack.pop() : stack.push(char);
       } else {
         stack.push(char);
